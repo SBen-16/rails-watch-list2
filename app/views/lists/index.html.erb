@@ -1,0 +1,7 @@
+<h1>Movies list</h1>
+
+<% @lists.each do |list| %>
+  <h3><%= list.name %></h3>
+
+  <%= link_to 'DESTROY IT', list_path(list), method: :delete, data: { confirm: "Are you sure? #{list.name}" } %>
+<% end %>
